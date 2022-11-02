@@ -1,0 +1,264 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_height="match_parent"
+    android:layout_width="match_parent"
+    android:fillViewport="true">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        tools:context=".MainActivity">
+
+        <ImageView
+            android:id="@+id/Logo"
+            android:layout_width="128dp"
+            android:layout_height="128dp"
+            android:layout_marginTop="32dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:srcCompat="@drawable/unsyiahcolor" />
+
+        <TextView
+            android:id="@+id/AppTittle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="18dp"
+            android:text="@string/app_name"
+            android:textSize="24sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/Logo" />
+
+        <!--Chain button-->
+        <Button
+            android:id="@+id/buttonSimkuliah"
+            android:layout_width="135dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="24dp"
+            android:text="Simkuliah"
+            app:layout_constraintEnd_toStartOf="@+id/buttonKRS"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/AppTittle"
+            android:onClick="Simkuliah"/>
+
+        <Button
+            android:id="@+id/buttonKRS"
+            android:layout_width="135dp"
+            android:layout_height="wrap_content"
+            android:text="KRS Online"
+            app:layout_constraintBottom_toBottomOf="@+id/buttonSimkuliah"
+            app:layout_constraintEnd_toStartOf="@+id/buttonSimpeg"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toEndOf="@+id/buttonSimkuliah"
+            app:layout_constraintTop_toTopOf="@+id/buttonSimkuliah"
+            android:onClick="KRS"/>
+
+        <Button
+            android:id="@+id/buttonSimpeg"
+            android:layout_width="135dp"
+            android:layout_height="wrap_content"
+            android:text="Simpeg"
+            app:layout_constraintBottom_toBottomOf="@+id/buttonKRS"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toEndOf="@+id/buttonKRS"
+            app:layout_constraintTop_toTopOf="@+id/buttonKRS"
+            android:onClick="Simpeg"/>
+
+        <Button
+            android:id="@+id/buttonUktb"
+            android:layout_width="135dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="32dp"
+            android:text="UKTB"
+            app:layout_constraintEnd_toStartOf="@+id/buttonArsip"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/buttonSimkuliah"
+            android:onClick="UKTB"/>
+
+        <Button
+            android:id="@+id/buttonArsip"
+            android:layout_width="135dp"
+            android:layout_height="wrap_content"
+            android:text="Arsip"
+            app:layout_constraintBottom_toBottomOf="@+id/buttonUktb"
+            app:layout_constraintEnd_toStartOf="@+id/buttonSiakad"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toEndOf="@+id/buttonUktb"
+            app:layout_constraintTop_toTopOf="@+id/buttonUktb"
+            android:onClick="Arsip"/>
+
+        <Button
+            android:id="@+id/buttonSiakad"
+            android:layout_width="135dp"
+            android:layout_height="wrap_content"
+            android:text="SIAKAD"
+            app:layout_constraintBottom_toBottomOf="@+id/buttonArsip"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toEndOf="@+id/buttonArsip"
+            app:layout_constraintTop_toTopOf="@+id/buttonArsip"
+            android:onClick="Siakad"/>
+
+        <Button
+            android:id="@+id/buttonBeasiswa"
+            android:layout_width="135dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="32dp"
+            android:text="Beasiswa"
+            app:layout_constraintEnd_toStartOf="@+id/buttonWali"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/buttonUktb"
+            android:onClick="Beasiswa"/>
+
+        <Button
+            android:id="@+id/buttonWali"
+            android:layout_width="135dp"
+            android:layout_height="wrap_content"
+            android:text="Perwalian"
+            app:layout_constraintBottom_toBottomOf="@+id/buttonBeasiswa"
+            app:layout_constraintEnd_toStartOf="@+id/buttonSimlit"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toEndOf="@+id/buttonBeasiswa"
+            app:layout_constraintTop_toTopOf="@+id/buttonBeasiswa"
+            android:onClick="Wali"/>
+
+        <Button
+            android:id="@+id/buttonSimlit"
+            android:layout_width="135dp"
+            android:layout_height="wrap_content"
+            android:text="SIMLIT"
+            app:layout_constraintBottom_toBottomOf="@+id/buttonWali"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toEndOf="@+id/buttonWali"
+            app:layout_constraintTop_toTopOf="@+id/buttonWali"
+            android:onClick="Simlit"/>
+
+        <Button
+            android:id="@+id/buttonSimkeu"
+            android:layout_width="135dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="32dp"
+            android:text="SIMKEU"
+            app:layout_constraintEnd_toStartOf="@+id/buttonSurvey"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/buttonBeasiswa"
+            android:onClick="Simkeu"/>
+
+        <Button
+            android:id="@+id/buttonSurvey"
+            android:layout_width="135dp"
+            android:layout_height="wrap_content"
+            android:text="Survey"
+            app:layout_constraintBottom_toBottomOf="@+id/buttonSimkeu"
+            app:layout_constraintEnd_toStartOf="@+id/buttonRP2U"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toEndOf="@+id/buttonSimkeu"
+            app:layout_constraintTop_toTopOf="@+id/buttonSimkeu"
+            android:onClick="Survey"/>
+
+        <Button
+            android:id="@+id/buttonRP2U"
+            android:layout_width="135dp"
+            android:layout_height="wrap_content"
+            android:text="RP2U"
+            app:layout_constraintBottom_toBottomOf="@+id/buttonSurvey"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toEndOf="@+id/buttonSurvey"
+            app:layout_constraintTop_toTopOf="@+id/buttonSurvey"
+            android:onClick="Repo"/>
+
+        <Button
+            android:id="@+id/buttonFSD"
+            android:layout_width="135dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="32dp"
+            android:text="FSD"
+            app:layout_constraintEnd_toStartOf="@+id/buttonKKN"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/buttonSimkeu"
+            android:onClick="FSD"/>
+
+        <Button
+            android:id="@+id/buttonKKN"
+            android:layout_width="135dp"
+            android:layout_height="wrap_content"
+            android:text="KKN"
+            app:layout_constraintBottom_toBottomOf="@+id/buttonFSD"
+            app:layout_constraintEnd_toStartOf="@+id/buttonPMB"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toEndOf="@+id/buttonFSD"
+            app:layout_constraintTop_toTopOf="@+id/buttonFSD"
+            android:onClick="KKN"/>
+
+        <Button
+            android:id="@+id/buttonPMB"
+            android:layout_width="135dp"
+            android:layout_height="wrap_content"
+            android:text="PMB"
+            app:layout_constraintBottom_toBottomOf="@+id/buttonKKN"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toEndOf="@+id/buttonKKN"
+            app:layout_constraintTop_toTopOf="@+id/buttonKKN"
+            android:onClick="PMB"/>
+
+        <Button
+            android:id="@+id/buttonSipl"
+            android:layout_width="135dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="32dp"
+            android:text="SIPL"
+            app:layout_constraintEnd_toStartOf="@+id/buttonSipkd"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/buttonFSD"
+            android:onClick="SIPL"/>
+
+        <Button
+            android:id="@+id/buttonSipkd"
+            android:layout_width="135dp"
+            android:layout_height="wrap_content"
+            android:text="SIPKD"
+            app:layout_constraintBottom_toBottomOf="@+id/buttonSipl"
+            app:layout_constraintEnd_toStartOf="@+id/buttonSimail"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toEndOf="@+id/buttonSipl"
+            app:layout_constraintTop_toTopOf="@+id/buttonSipl"
+            android:onClick="SIPKD"/>
+
+        <Button
+            android:id="@+id/buttonSimail"
+            android:layout_width="135dp"
+            android:layout_height="wrap_content"
+            android:text="SIMAIL"
+            app:layout_constraintBottom_toBottomOf="@+id/buttonSipkd"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toEndOf="@+id/buttonSipkd"
+            app:layout_constraintTop_toTopOf="@+id/buttonSipkd"
+            android:onClick="Simail"/>
+
+        <Button
+            android:id="@+id/buttonStat"
+            android:layout_width="135dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="32dp"
+            android:text="Portal Data"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/buttonSipkd"
+            android:onClick="PortalData"/>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</ScrollView>
